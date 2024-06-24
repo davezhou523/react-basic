@@ -17,7 +17,7 @@ const {setChannel}=channelStore.actions
 const fetchChannelList = () => {
   return  async (dispatch)=>{
       const res=await axios.get('https://geek.itheima.net/v1_0/channels')
-      dispatch(setChannel(res.data.channels))
+      dispatch(setChannel(res.data.data.channels))
   }
 }
 export {fetchChannelList}

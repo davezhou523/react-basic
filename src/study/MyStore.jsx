@@ -8,7 +8,6 @@ const MyStore=function () {
     ////react 组件中使用store中数据，使用useSelector钩子函数把store中的数据映射到组件中
     const {count} =useSelector(state => state.mycounter)
     const {channelList}=useSelector(state=>state.mychannel)
-    console.log(channelList)
     console.log(fetchChannelList())
     //使用useDispath（）修改store内容，调用store中action对象的方法
     const dispatch=useDispatch()
@@ -25,7 +24,7 @@ const MyStore=function () {
             <button onClick={()=>dispatch(addNum(20))}>add 20</button>
             <br></br>
             <ul>
-                {channelList}
+                {channelList.map((item)=><li key={item.id}>{item.name}</li>)}
             </ul>
         </div>
     )
