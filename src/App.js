@@ -9,6 +9,7 @@
 // import MyContext from './study/MyContext'
 // import MyEffect from './study/MyEffect'
 import MyStore from './study/MyStore'
+import MeituanApp from "./meituan";
 
 //react 组件中使用store中数据，使用useSelector钩子函数把store中的数据映射到组件中
 import {useSelector} from "react-redux";
@@ -32,7 +33,8 @@ function App() {
     {/*    <MyBrother></MyBrother>*/}
     {/*    <MyContext></MyContext>*/}
     {/*    <MyEffect></MyEffect>*/}
-        {<MyStore></MyStore>}
+    {/*    {<MyStore></MyStore>}*/}
+        {<MeituanApp></MeituanApp>}
     </div>
   );
 }
